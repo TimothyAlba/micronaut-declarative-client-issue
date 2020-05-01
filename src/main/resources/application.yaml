@@ -1,0 +1,15 @@
+micronaut:
+  application:
+    name: micronaut-client-issues
+  http:
+    services:
+      hello:
+        url: 'http://localhost:8080/server2'
+        connect-timeout: ${CONNECT_TIMEOUT:'5s'}
+        read-timeout: ${READ_TIMEOUT:'5s'}
+        pool:
+          enabled: true
+  server:
+    port: 8080
+    cors:
+      enabled: true
