@@ -4,8 +4,8 @@ import io.micronaut.http.annotation.Get;
 import io.micronaut.http.client.annotation.Client;
 import io.reactivex.Maybe;
 
-@Client("http://localhost:8080/server2")
+@Client("good-client")
 public interface GoodClient {
-    @Get("/hello")
+    @Get("/server2/hello")
     Maybe<String> getHello();
 }

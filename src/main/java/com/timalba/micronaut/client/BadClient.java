@@ -4,7 +4,7 @@ import io.micronaut.http.annotation.Get;
 import io.micronaut.http.client.annotation.Client;
 import io.reactivex.Maybe;
 
-@Client("hello")
+@Client("bad-client")
 public interface BadClient {
     @Get("/hello")
     Maybe<String> getHello();

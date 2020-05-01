@@ -3,12 +3,12 @@ micronaut:
     name: micronaut-client-issues
   http:
     services:
-      hello:
-        url: 'http://localhost:8080/server2'
-        connect-timeout: ${CONNECT_TIMEOUT:'5s'}
-        read-timeout: ${READ_TIMEOUT:'5s'}
-        pool:
-          enabled: true
+      bad-client:
+        urls:
+          - http://localhost:8080/server2
+      good-client:
+        urls:
+          - http://localhost:8080
   server:
     port: 8080
     cors:
